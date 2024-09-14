@@ -1,0 +1,14 @@
+-
+  name: install Nginx and started
+  hosts: servers
+  become: yes       #(for root user access)
+  tasks:
+    - name: install nginx
+      apt:          #(module of ubuntu which is used for install)
+        name: nginx
+        state: latest 
+    - name: Start Nginx
+      service:    #(module use for start services in ubuntu)
+        name: nginx
+        state: started
+        enabled: yes
