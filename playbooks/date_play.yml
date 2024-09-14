@@ -2,7 +2,7 @@
   name: date playbook
   hosts: all
   tasks:
-    - name: Show Date
+    - name: Show date
       command: date
 
     - name: Show uptime
